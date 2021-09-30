@@ -2,16 +2,20 @@
     "name": "yeahh",
     "short_name": "MultiMessenger",
     "description": "__MSG_description__",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "permissions": [
-        "activeTab",
-        "webRequest"
+        "<all_urls>",
+        "tabs",
+        "storage",
+        "contextMenus",
+        "webRequest",
+        "webRequestBlocking"
     ],
     "background": {
-        "service_worker": "back.js"
+        "scripts": ["back.js"]
     },
     "version": "5.6",
-    "action": {
+    "browser_action": {
         "default_title": "Click to show an alert"
     }
 }
